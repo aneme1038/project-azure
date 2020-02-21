@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'azure.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'azure',
-        'HOST': "mongodb+srv://aneme:ColdPlay0!@sei-q6ad2.azure.mongodb.net/azure?retryWrites=true&ssl=true&ssl_cert_reqs=CERT_NONE&w=majority",
+        'NAME': 'test',
+        'HOST': "mongodb+srv://aneme:ColdPlay0!@sei-q6ad2.azure.mongodb.net/test?retryWrites=true&ssl=true&ssl_cert_reqs=CERT_NONE&w=majority",
         'USER': 'aneme',
         'PASSWORD': 'ColdPlay0!'
     }
