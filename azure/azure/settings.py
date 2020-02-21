@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*u#9aw1k9hu@n%qgbwwke^x=3%qv(05z57axx3ejo$a!#1_n4n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost:8000']
 
 
 # Application definition
@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'azure.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'azure',
+        'HOST': "mongodb+srv://aneme:ColdPlay0!@sei-q6ad2.azure.mongodb.net/azure?retryWrites=true&ssl=true&ssl_cert_reqs=CERT_NONE&w=majority",
+        'USER': 'aneme',
+        'PASSWORD': 'ColdPlay0!'
     }
 }
 
