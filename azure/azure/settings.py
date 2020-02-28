@@ -76,11 +76,12 @@ WSGI_APPLICATION = 'azure.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'test',
-        'HOST': "mongodb+srv://aneme:ColdPlay0!@sei-q6ad2.azure.mongodb.net/test?retryWrites=true&ssl=true&ssl_cert_reqs=CERT_NONE&w=majority",
-        'USER': 'aneme',
-        'PASSWORD': 'ColdPlay0!'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'llwdouza',
+        'HOST': "isilo.db.elephantsql.com",
+        'USER': 'llwdouza',
+        'PASSWORD': 'mBWdxtzE21vQT8lT3HStoFhk2KS9KRtr',
+        'PORT': '5432'
     }
 }
 
