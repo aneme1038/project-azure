@@ -11,8 +11,9 @@ def index(request):
     #get the latest published Item in your list
     latest_item_list = Item.objects.order_by('-creation_date')[:5]
     #put the list into an object for contextual display
+    template = loader.get_template('projectA/index.html')
     context = {'latest_item': latest_item_list}
-    return render(request, 'react/index.html', context)
+    return HttpResponse(template.render(context, request))
 
 #Show specific item and its content
 # def item_info(request, item_id):
