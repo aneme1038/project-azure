@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.template import loader
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+
 from .models import Item
 # Create your views here.
 
@@ -8,8 +11,8 @@ def index(request):
     #get the latest published Item in your list
     latest_item_list = Item.objects.order_by('-creation_date')[:5]
     #put the list into an object for contextual display
-    context = {'latest_item': latest_item}
-    return render(request, 'templates/index.html', context)
+    context = {'latest_item': latest_item_list}
+    return render(request, 'react/index.html', context)
 
 #Show specific item and its content
 # def item_info(request, item_id):
