@@ -9,14 +9,14 @@ def index(request):
     latest_item_list = Item.objects.order_by('-creation_date')[:5]
     #put the list into an object for contextual display
     context = {'latest_item': latest_item}
-    return render(request, 'projectA/index.html', context)
+    return render(request, 'templates/index.html', context)
 
 #Show specific item and its content
-def item_info(request, item_id):
-    try:
-        item = Item.objects.get(pk=item_id)
-    except Item.DoesNotExist:
-        raise Http404("Item Does Not Exist")
-    return render(request, 'projectA/InsertUrlPathwayHere', { 'item': item})
+# def item_info(request, item_id):
+#     try:
+#         item = Item.objects.get(pk=item_id)
+#     except Item.DoesNotExist:
+#         raise Http404("Item Does Not Exist")
+#     return render(request, 'projectA/InsertUrlPathwayHere', { 'item': item})
 
-#Create other views here 
+#Create other views here

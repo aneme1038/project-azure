@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'azure.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'llwdouza',
-        'HOST': "isilo.db.elephantsql.com",
-        'USER': 'llwdouza',
-        'PASSWORD': 'mBWdxtzE21vQT8lT3HStoFhk2KS9KRtr',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'azure',
+        'HOST': "localhost",
+        'USER': 'postgres',
+        'PASSWORD': 'A1n9e2m8e30!',
+        'PORT': '5433'
     }
 }
 
