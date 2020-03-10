@@ -31,14 +31,16 @@ ALLOWED_HOSTS = ['localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    'projectA.apps.ProjectaConfig',
+    #'projectA.apps.ProjectaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+    'projectA',
+    'frontend',
 ]
 
 MIDDLEWARE = [
