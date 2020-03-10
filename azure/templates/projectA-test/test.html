@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="text-center mb-3">Items</h1>
+  {% if latest_item_list %}
+    {% for item in latest_item_list %}
+      <div class="card mb-3">
+        <div class="card-body">
+          <p class="lead">{{ item.item_text }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+
+  {% endif %}
+{% endblock %}
