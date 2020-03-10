@@ -1,6 +1,6 @@
 from projectA.models import Item
 from rest_framework import viewsets, permissions
-from azure.projectA.serializers import ItemSerializer
+from .serializers import ItemSerializer#, UserSerializer, GroupSerializer
 '''
 # A viewset allows us to create a full CRUD API without having to specify
 # explicit methods for the functionality. It's kind of like how Ruby on Rails
@@ -20,17 +20,17 @@ class ItemViewSet(viewsets.ModelViewSet):
     ]
     serializer_class = ItemSerializer
 
-# User Viewset
-class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited
-    """
-    queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-# Group Viewset
-class GroupViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited
-    """
+# # User Viewset
+# class UserViewSet(viewsets.ModelViewSet):
+#     """
+#     API endpoint that allows users to be viewed or edited
+#     """
+#     queryset = User.objects.all().order_by('-date_joined')
+#     serializer_class = UserSerializer
+#     permission_classes = [permissions.IsAuthenticated]
+#
+# # Group Viewset
+# class GroupViewSet(viewsets.ModelViewSet):
+#     """
+#     API endpoint that allows groups to be viewed or edited
+#     """

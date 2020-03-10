@@ -17,12 +17,13 @@ urlpatterns = [
 
 #Below selection is new code
 from rest_framework import routers
-from .api import ItemViewSet, UserViewSet, GroupViewSet
+from django.urls import path, include
+from .api import ItemViewSet#, UserViewSet, GroupViewSet
 
 router = routers.DefaultRouter()
 router.register('api/item', ItemViewSet, 'item')
-router.register('api/users', UserViewSet, 'user')
-router.register('api/groups', GroupViewSet, 'group')
+# router.register('api/users', UserViewSet, 'user')
+# router.register('api/groups', GroupViewSet, 'group')
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -49,7 +49,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'myapp.middleware.dev_cors_middleware'
 ]
 
 ROOT_URLCONF = 'azure.urls'
@@ -57,7 +56,7 @@ ROOT_URLCONF = 'azure.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -87,13 +86,6 @@ DATABASES = {
     }
 }
 
-# REST_FRAMEWORK = {
-#     # Use Django's standard `django.contrib.auth` permissions,
-#     # or allow read-only access for unathenticated users.
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-#     ]
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
