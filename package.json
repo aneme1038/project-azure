@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development ./project-azure/frontend/src/index.js --output ./project-azure/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./project-azure/frontend/src/index.js --output ./project-azure/frontend/static/frontend/main.js"
+    "dev": "webpack --mode development --watch ./azure/frontend/src/index.js --output ./azure/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./azure/frontend/src/index.js --output ./azure/frontend/static/frontend/main.js"
   },
   "repository": {
     "type": "git",

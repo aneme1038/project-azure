@@ -1,11 +1,20 @@
+//==========================================//
+//---------------APP-----------------------//
+//    This is the main container for all  //
+//          React Components             //
+//======================================//
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Header from './Header';
+import Footer from './Footer';
+import Navigation from './Navigation';
 
 class App extends Component {
   render() {
     return (
-      <h1>React App</h1>,
-      <h3>hi there</h3>
+      <Header />
+      <Navigation />
+      <Footer />
     )
   }
 }
