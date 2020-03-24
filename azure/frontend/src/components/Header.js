@@ -1,6 +1,7 @@
 //==========================================//
 //---------------HEADER--------------------//
-//The Header will only contain the title  //
+//The Header will only contain the title, //
+//clock/time/date, and a few other things //
 //=======================================//
 import React, { Component } from 'react'
 
