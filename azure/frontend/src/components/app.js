@@ -94,9 +94,23 @@ class App extends Component {
   // ========== //
   render() {
     return (
-      <Header />
-      <Navigation />
-      <Footer />
+      <React.Fragment >
+        <Header
+          handleSearch={this.handleSearch}
+          handleChange={this.handleChange}
+          handleView={this.handleView}
+        />
+        <Navigation
+          handleSearch={this.handleSearch}
+          handleChange={this.handleChange}
+          handleView={this.handleView}
+        />
+        <Footer
+          handleSearch={this.handleSearch}
+          handleChange={this.handleChange}
+          handleView={this.handleView}
+        />
+      </React.Fragment >
     )
   }
 }
