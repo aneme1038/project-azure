@@ -3,12 +3,14 @@
 //    This is the main container for all  //
 //          React Components             //
 //======================================//
-import React, { Component } from 'react';
+import React, {
+  Component,
+  Fragment
+} from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Navigation from './Navigation';
-require('dotenv').config();
 
 class App extends Component {
   constructor(props) {
@@ -87,32 +89,49 @@ class App extends Component {
   //   })
   // }
   handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value })
+    this.setState({
+      [event.target.id]: event.target.value
+    })
   }
   // =========== //
   // RENDER     //
   // ========== //
   render() {
     return (
-      <React.Fragment >
-        <Header
-          handleSearch={this.handleSearch}
-          handleChange={this.handleChange}
-          handleView={this.handleView}
-        />
-        <Navigation
-          handleSearch={this.handleSearch}
-          handleChange={this.handleChange}
-          handleView={this.handleView}
-        />
-        <Footer
-          handleSearch={this.handleSearch}
-          handleChange={this.handleChange}
-          handleView={this.handleView}
-        />
-      </React.Fragment >
+      <Fragment >
+        <Header handleSearch = {
+          this.handleSearch
+        }
+        handleChange = {
+          this.handleChange
+        }
+        handleView = {
+          this.handleView
+        }
+        /> 
+        <Navigation handleSearch = {
+          this.handleSearch
+        }
+        handleChange = {
+          this.handleChange
+        }
+        handleView = {
+          this.handleView
+        }
+        /> 
+        <Footer handleSearch = {
+          this.handleSearch
+        }
+        handleChange = {
+          this.handleChange
+        }
+        handleView = {
+          this.handleView
+        }
+        /> 
+      </Fragment>
     )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+export default App;
