@@ -98,7 +98,9 @@ class App extends Component {
   // ========== //
   render() {
     return (
+
       <Fragment >
+        <h1>Hello World</h1>
         <Header handleSearch = {
           this.handleSearch
         }
@@ -108,7 +110,7 @@ class App extends Component {
         handleView = {
           this.handleView
         }
-        /> 
+        />
         <Navigation handleSearch = {
           this.handleSearch
         }
@@ -118,7 +120,7 @@ class App extends Component {
         handleView = {
           this.handleView
         }
-        /> 
+        />
         <Footer handleSearch = {
           this.handleSearch
         }
@@ -128,7 +130,7 @@ class App extends Component {
         handleView = {
           this.handleView
         }
-        /> 
+        />
       </Fragment>
     )
   }
