@@ -98,7 +98,6 @@ class App extends Component {
   // ========== //
   render() {
     return (
-
       <Fragment >
         <h1>Hello World</h1>
         <Header handleSearch = {
@@ -136,4 +135,4 @@ class App extends Component {
   }
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('app'));
